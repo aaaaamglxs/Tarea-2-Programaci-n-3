@@ -56,11 +56,11 @@ if (!$stmt->fetch()) {
 $total = $db->query('SELECT COUNT(*) FROM cursos')->fetchColumn();
 if ($total == 0) {
     $cursosData = [
-        ['HTML Básico','Aprende a estructurar la web con etiquetas, formularios y multimedia. Domina HTML5 desde cero creando tus primeras páginas profesionales.',0,3,6,'imagenes/HTML.jpg','Módulo 1'],
-        ['CSS Básico','Dale vida y color a tus estructuras HTML. Aprende selectores, modelo de caja, flexbox, grid y a maquetar interfaces modernas y atractivas.',0,3,6,'imagenes/CSS.jpg','Módulo 2'],
-        ['JavaScript Básico','Añade interactividad a tus sitios web. Controla el DOM, maneja eventos, trabaja con APIs y domina la lógica de programación del lado del cliente.',0,4,8,'imagenes/JAVASCRIPT.jpg','Módulo 3'],
-        ['PHP Básico','Conecta tu web con el servidor. Aprende manejo de sesiones, formularios, cookies, archivos, envío de correos e integración de backend de forma segura.',0,3,6,'imagenes/PHP.jpg','Módulo 4'],
-        ['MySQL Básico','Gestiona la información de tus usuarios. Crea bases de datos relacionales, diseña tablas, realiza consultas avanzadas y aprende a integrar todo con PHP.',0,3,6,'imagenes/MySQL.jpg','Módulo 5'],
+        ['HTML Básico','Aprende a estructurar la web con etiquetas, formularios y multimedia. Domina HTML5 desde cero creando tus primeras páginas profesionales.',0,3,6,'https://placehold.co/600x300/e34c26/ffffff?text=HTML+Basico','Módulo 1'],
+        ['CSS Básico','Dale vida y color a tus estructuras HTML. Aprende selectores, modelo de caja, flexbox, grid y a maquetar interfaces modernas y atractivas.',0,3,6,'https://placehold.co/600x300/264de4/ffffff?text=CSS+Basico','Módulo 2'],
+        ['JavaScript Básico','Añade interactividad a tus sitios web. Controla el DOM, maneja eventos, trabaja con APIs y domina la lógica de programación del lado del cliente.',0,4,8,'https://placehold.co/600x300/f7df1e/000000?text=JavaScript+Basico','Módulo 3'],
+        ['PHP Básico','Conecta tu web con el servidor. Aprende manejo de sesiones, formularios, cookies, archivos, envío de correos e integración de backend de forma segura.',0,3,6,'https://placehold.co/600x300/777bb4/ffffff?text=PHP+Basico','Módulo 4'],
+        ['MySQL Básico','Gestiona la información de tus usuarios. Crea bases de datos relacionales, diseña tablas, realiza consultas avanzadas y aprende a integrar todo con PHP.',0,3,6,'https://placehold.co/600x300/00758f/ffffff?text=MySQL+Basico','Módulo 5'],
     ];
     $stmt = $db->prepare('INSERT INTO cursos (titulo, descripcion, precio, duracion_semanas, num_modulos, imagen, badge) VALUES (?,?,?,?,?,?,?)');
     foreach ($cursosData as $c) { $stmt->execute($c); }

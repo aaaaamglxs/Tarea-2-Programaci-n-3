@@ -31,7 +31,7 @@ include __DIR__ . '/includes/header.php';
     <div class="courses-grid">
         <?php foreach ($cursos as $curso): ?>
         <article class="course-card">
-            <img src="/<?php echo htmlspecialchars($curso['imagen']); ?>" alt="Curso de <?php echo htmlspecialchars($curso['titulo']); ?>" class="course-cover-img" onerror="this.src='/imagenes/HTML.jpg'">
+            <img src="<?php echo htmlspecialchars($curso['imagen']); ?>" alt="Curso de <?php echo htmlspecialchars($curso['titulo']); ?>" class="course-cover-img" onerror="this.src='https://placehold.co/600x300/4f46e5/ffffff?text=<?php echo urlencode($curso['titulo']); ?>'">
             <div class="card-content">
                 <span class="badge"><?php echo htmlspecialchars($curso['badge']); ?></span>
                 <h3><?php echo htmlspecialchars($curso['titulo']); ?></h3>
