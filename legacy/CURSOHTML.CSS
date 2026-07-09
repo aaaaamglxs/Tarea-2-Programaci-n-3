@@ -1,0 +1,120 @@
+/* --- BANNER DECORATIVO --- */
+.course-hero {
+    position: relative;
+    background: linear-gradient(135deg, #4f46e5 0%, #2e2a85 100%);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.hero-decoration {
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    filter: blur(40px);
+}
+
+.hero-badge {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.course-hero h1 { font-size: 2.8rem; margin: 20px 0; color: white; }
+.course-hero p { font-size: 1.1rem; color: #e0e7ff; max-width: 600px; margin: 0 auto 25px; }
+.hero-meta { display: flex; justify-content: center; gap: 20px; font-weight: 500; color: #a5b4fc; }
+
+/* --- CONTENEDOR PRINCIPAL --- */
+.detalle-curso-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h3 { font-size: 1.4rem; margin-bottom: 15px; }
+.descripcion-box { margin-bottom: 40px; }
+.descripcion-box h1 { font-size: 1.6rem; margin-bottom: 10px; }
+
+/* Lista de módulos */
+.lista-modulos { list-style: none; margin-bottom: 40px; }
+.lista-modulos li {
+    background: white; padding: 15px 20px; margin-bottom: 10px;
+    border: 1px solid var(--border-color); border-radius: 8px;
+    transition: var(--transition);
+}
+.lista-modulos li:hover {
+    transform: translateX(10px);
+    border-color: var(--primary-color);
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+}
+
+/* Ventana tipo VS Code */
+.vscode-window {
+    background: #1e1e1e; color: #d4d4d4; border-radius: var(--radius);
+    overflow: hidden; margin-bottom: 40px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+}
+.title-bar { background: #333; padding: 8px 15px; font-size: 0.8rem; display: flex; justify-content: space-between; align-items: center; }
+.window-controls { display: flex; gap: 6px; }
+.window-controls div { width: 10px; height: 10px; border-radius: 50%; }
+.close { background: #ff5f56; } .minimize { background: #ffbd2e; } .maximize { background: #27c93f; }
+.tabs { background: #252526; padding: 8px 15px; font-size: 0.8rem; }
+.code-panel { padding: 20px; font-family: 'Courier New', monospace; font-size: 0.9rem; }
+.keyword { color: #569cd6; } .string { color: #ce9178; }
+
+/* Razones */
+.razones-container { margin-bottom: 40px; }
+.razones-lista { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 20px; }
+.razones-lista li {
+    background: white; padding: 15px; border: 1px solid var(--border-color);
+    border-radius: var(--radius); display: flex; align-items: center; gap: 10px;
+    transition: var(--transition);
+}
+.razones-lista li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.1);
+}
+.icono { font-size: 1.2rem; }
+
+/* Botones */
+.btn-aplicar {
+    display: block;
+    width: fit-content;
+    margin: 40px auto;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 16px 40px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    text-align: center;
+    transition: var(--transition);
+}
+.btn-aplicar:hover {
+    background-color: var(--primary-hover);
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(79, 70, 229, 0.3);
+}
+
+.back-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+a:hover { text-decoration: underline; }
+
+@media (max-width: 600px) {
+    .razones-lista { grid-template-columns: 1fr; }
+    .course-hero h1 { font-size: 2rem; }
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil - Atelier</title>
+    <link rel="stylesheet" href="MIPERFIL.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="logo-icon">🚀</span> Atelier
+            </div>
+            <div class="nav-links">
+                <a href="index.php">Inicio</a>
+                <a href="login.php" class="nav-link-logout">Cerrar Sesión</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="dashboard-container">
+        
+        <aside class="profile-sidebar">
+            <div class="profile-card">
+                <div class="profile-avatar">
+                    <span>AR</span>
+                </div>
+                <h2 class="profile-name">Alba Ronmero</h2>
+                <p class="profile-id">ID Alumno: <strong>AE-089</strong></p>
+                <span class="status-badge">Estudiante Activo</span>
+            </div>
+        </aside>
+
+        <section class="main-content">
+            
+            <div class="content-section">
+                <div class="section-header">
+                    <h2>Mis Cursos</h2>
+                    <p>Tu ruta de aprendizaje actual.</p>
+                </div>
+
+                <article class="enrolled-card">
+                    <div class="course-info">
+                        <div class="course-icon html-icon">🌐</div>
+                        <div class="course-details">
+                            <h3>HTML Básico (Intensivo)</h3>
+                            <p>Programa de 3 semanas • 6 módulos fundamentales</p>
+                        </div>
+                    </div>
+                    
+                    <div class="course-actions">
+                        <div class="progress-text">0% completado</div>
+                        <a href="/curso/html/modulo/1" class="btn-start">Comenzar</a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="content-section">
+                <div class="section-header">
+                    <h2>Mi Horario de Clases</h2>
+                    <p>Bloques de estudio programados en tu semana.</p>
+                </div>
+
+                <div class="schedule-grid">
+                    <div class="day-header">Lun</div>
+                    <div class="day-header">Mar</div>
+                    <div class="day-header">Mié</div>
+                    <div class="day-header">Jue</div>
+                    <div class="day-header">Vie</div>
+                    <div class="day-header">Sáb</div>
+                    <div class="day-header">Dom</div>
+
+                    <div class="time-slot empty"></div>
+                    <div class="time-slot empty"></div>
+                    <div class="time-slot active-slot">
+                        <span class="time">09:00 - 11:00</span>
+                        <span class="subject">HTML</span>
+                    </div>
+                    <div class="time-slot empty"></div>
+                    <div class="time-slot active-slot">
+                        <span class="time">09:00 - 11:00</span>
+                        <span class="subject">HTML</span>
+                    </div>
+                    <div class="time-slot empty"></div>
+                    <div class="time-slot empty"></div>
+
+                    <div class="time-slot active-slot">
+                        <span class="time">14:00 - 16:00</span>
+                        <span class="subject">Práctica</span>
+                    </div>
+                    <div class="time-slot empty"></div>
+                    <div class="time-slot empty"></div>
+                    <div class="time-slot active-slot">
+                        <span class="time">14:00 - 16:00</span>
+                        <span class="subject">Práctica</span>
+                    </div>
+                    <div class="time-slot empty"></div>
+                    <div class="time-slot empty"></div>
+                    <div class="time-slot empty"></div>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

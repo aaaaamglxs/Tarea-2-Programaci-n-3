@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - Atelier</title>
+    <link rel="stylesheet" href="INICIOSESION.css">
+</head>
+<body>
+
+    <div class="auth-container">
+        
+        <div class="auth-info">
+            <div class="info-content">
+                <h1>¡Qué bueno verte de nuevo!</h1>
+                <p>Retoma tus clases justo donde las dejaste y sigue avanzando en tus proyectos.</p>
+                
+                <div class="features">
+                    <div class="feature-item">
+                        <span class="icon">🎯</span>
+                        <p>Enfócate en tu próxima meta</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="auth-form-container">
+            <div class="form-header">
+                <h2>Iniciar Sesión</h2>
+                <p>¿Aún no eres parte? <a href="registro.php" class="link">Regístrate aquí</a></p>
+            </div>
+
+            <button type="button" class="btn-social google-btn">
+                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='18' height='18'><path fill='%23EA4335' d='M5.266 9.765A7.077 7.077 0 0 1 12 4.909c1.69 0 3.218.6 4.418 1.582l3.51-3.51C17.642 1.09 14.99 0 12 0 7.354 0 3.373 2.667 1.455 6.555l3.81 3.21z'/><path fill='%234285F4' d='M23.49 12.275c0-.826-.074-1.62-.21-2.387H12v4.513h6.44c-.277 1.454-1.096 2.686-2.327 3.514v2.922h3.765c2.202-2.03 3.612-5.018 3.612-8.562z'/><path fill='%23FBBC05' d='M5.266 14.235L1.455 17.45A11.948 11.948 0 0 1 0 12c0-1.95.467-3.793 1.295-5.432l3.96 3.06c-.16.746-.255 1.523-.255 2.372 0 .86.097 1.649.266 2.435z'/><path fill='%2334A853' d='M12 24c3.24 0 5.957-1.077 7.942-2.916l-3.764-2.922c-1.043.698-2.38 1.113-4.178 1.113-3.218 0-5.945-2.173-6.913-5.093L1.295 17.43A11.948 11.948 0 0 0 12 24z'/></svg>" alt="Google">
+                Ingresar con Google
+            </button>
+
+            <div class="divider">
+                <span>o usa tu correo electrónico</span>
+            </div>
+
+            <form action="/login" method="POST" class="auth-form">
+                
+                <div class="input-group">
+                    <label for="correo">Correo electrónico</label>
+                    <input type="email" id="correo" name="correo" placeholder="correo@ejemplo.com" required autocomplete="email">
+                </div>
+
+                <div class="input-group">
+                    <div class="password-header">
+                        <label for="password">Contraseña</label>
+                        <a href="/recuperar-password" class="link-forgot">¿Olvidaste tu contraseña?</a>
+                    </div>
+                    <input type="password" id="password" name="password" placeholder="Tu contraseña" required autocomplete="current-password">
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="recordarme" name="recordarme">
+                    <label for="recordarme">Recordarme en este dispositivo</label>
+                </div>
+
+                <a href="index.php" class="btn-submit">Iniciar Sesión</a>
+            </form>
+        </div>
+
+    </div>
+
+</body>
+</html>

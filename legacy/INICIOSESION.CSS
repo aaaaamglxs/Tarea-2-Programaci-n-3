@@ -1,0 +1,118 @@
+/* Layout centrado para páginas de autenticación */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Contenedor Principal */
+.auth-container {
+    display: flex;
+    background-color: var(--bg-card);
+    border-radius: var(--radius);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 900px;
+    overflow: hidden;
+}
+
+/* Panel Izquierdo */
+.auth-info {
+    flex: 1;
+    background: linear-gradient(135deg, #4f46e5 0%, #2e2a85 100%);
+    color: #ffffff;
+    padding: 45px;
+    display: flex;
+    align-items: center;
+}
+
+.info-content h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    line-height: 1.2;
+}
+
+.info-content p {
+    color: #e0e7ff;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 35px;
+}
+
+.features {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.feature-item .icon {
+    font-size: 1.2rem;
+    background: rgba(255, 255, 255, 0.12);
+    padding: 8px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+}
+
+.feature-item p {
+    margin-bottom: 0;
+    font-size: 0.95rem;
+    color: #ffffff;
+}
+
+/* Panel Derecho */
+.auth-form-container {
+    flex: 1.2;
+    padding: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-header {
+    margin-bottom: 26px;
+}
+
+.form-header h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.form-header p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* Formulario de autenticación */
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .auth-container {
+        flex-direction: column;
+        max-width: 480px;
+    }
+    .auth-info {
+        display: none;
+    }
+    .auth-form-container {
+        padding: 35px 24px;
+    }
+}
