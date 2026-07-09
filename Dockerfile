@@ -1,7 +1,12 @@
 FROM php:8.2-cli
 
-# Instalar extensiones SQLite necesarias
-RUN docker-php-ext-install pdo pdo_sqlite
+# Instalar librerías de sistema necesarias para SQLite
+RUN apt-get update && apt-get install -y \
+    libsqlite3-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+# Instalar extensiones PHP para SQLite
+RUN docker-php-ext-install pdo pdo_sqlite sqlite3
 
 WORKDIR /var/www/html
 
