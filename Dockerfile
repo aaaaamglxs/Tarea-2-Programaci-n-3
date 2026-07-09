@@ -5,8 +5,8 @@ RUN apt-get update && apt-get install -y \
     libsqlite3-dev \
     && rm -rf /var/lib/apt/lists/*
 
-# Instalar extensiones PHP para SQLite
-RUN docker-php-ext-install pdo pdo_sqlite sqlite3
+# Instalar extensiones PHP para SQLite (pdo_sqlite ya cubre todo lo necesario)
+RUN docker-php-ext-install pdo pdo_sqlite
 
 WORKDIR /var/www/html
 
